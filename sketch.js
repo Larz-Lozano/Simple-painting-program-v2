@@ -25,7 +25,7 @@ function draw (){
  //brush
    stroke(brushClr);
    strokeWeight(brushSize);
-   if (mousePressed==true && mouseX<1000){
+   if (mouseIsPressed==true && mouseX<1000){
      x=mouseX;
    line (pmouseX, pmouseY, mouseX, mouseY);
  }
@@ -58,7 +58,7 @@ function draw (){
  fill (0);//black
  rect (1000+((200/3)+(200/3)),150,200/3,50,30);
  
- if (mousePressed) {
+ if (mouseIsPressed) {
    if ((mouseX>=1000 && mouseX<=1000+(200/3)) && (mouseY>=0 && mouseY<=50)) {
      brushClr= '#FF1616';//red
    }else if ((mouseX>=1000+(200/3) && mouseX<=1000+(200/3)+(200/3)) && (mouseY>=0 && mouseY<=50)) {
@@ -100,30 +100,30 @@ function draw (){
   }
   
 //brush size slider
-  if (mousePressed==true) {
+  if (mouseIsPressed==true) {
   if (mouseX >=1010 && mouseX <= 1050 && mouseY>=245 && mouseY<=670)  {
      y=mouseY;
     }
   }
-   if (mousePressed && mouseX>1010 && mouseX<1050 && mouseY>245 && mouseY<274){
+   if (mouseIsPressed && mouseX>1010 && mouseX<1050 && mouseY>245 && mouseY<274){
      brushSize=2;
-   }else if (mousePressed && mouseX>1010 && mouseX<1050 && mouseY>=274 && mouseY<318){
+   }else if (mouseIsPressed && mouseX>1010 && mouseX<1050 && mouseY>=274 && mouseY<318){
      brushSize=5;
-   }else if (mousePressed && mouseX>1010 && mouseX<1050 && mouseY>=318 && mouseY<362){
+   }else if (mouseIsPressed && mouseX>1010 && mouseX<1050 && mouseY>=318 && mouseY<362){
      brushSize=10;
-   }else if (mousePressed && mouseX>1010 && mouseX<1050 && mouseY>=362 && mouseY<406){
+   }else if (mouseIsPressed && mouseX>1010 && mouseX<1050 && mouseY>=362 && mouseY<406){
      brushSize=20;
-   }else if (mousePressed && mouseX>1010 && mouseX<1050 && mouseY>=406 && mouseY<450){
+   }else if (mouseIsPressed && mouseX>1010 && mouseX<1050 && mouseY>=406 && mouseY<450){
      brushSize=50;
-   }else if (mousePressed && mouseX>1010 && mouseX<1050 && mouseY>=450 && mouseY<494){
+   }else if (mouseIsPressed && mouseX>1010 && mouseX<1050 && mouseY>=450 && mouseY<494){
      brushSize=80;
-   }else if (mousePressed && mouseX>1010 && mouseX<1050 && mouseY>=494 && mouseY<538){
+   }else if (mouseIsPressed && mouseX>1010 && mouseX<1050 && mouseY>=494 && mouseY<538){
      brushSize=100;
    }else if (mousePressed && mouseX>1010 && mouseX<1050 && mouseY>=538 && mouseY<582){
      brushSize=150;
-   }else if (mousePressed && mouseX>1010 && mouseX<1050 && mouseY>=582 && mouseY<626){
+   }else if (mouseIsPressed && mouseX>1010 && mouseX<1050 && mouseY>=582 && mouseY<626){
      brushSize=200;
-   }else if (mousePressed && mouseX>1010 && mouseX<1050 && mouseY>=626 && mouseY<670){
+   }else if (mouseIsPressed && mouseX>1010 && mouseX<1050 && mouseY>=626 && mouseY<670){
      brushSize=250;
    }
 //thumb
@@ -134,7 +134,7 @@ function draw (){
   image (img3, 1090, 250,100,120);
 
 //eraser
-  if (mousePressed && mouseX>=1100 && mouseX<=1190 && mouseY>=400 && mouseY<=465){
+  if (mouseIsPressed && mouseX>=1100 && mouseX<=1190 && mouseY>=400 && mouseY<=465){
   fill (bg);
   rect (0,0, 1000, height);
   fill ('#FFFF00');
@@ -148,7 +148,7 @@ function draw (){
   text("Erase",1123,405+115);
   
 //save
-  if (mousePressed && mouseX>=1100 && mouseX<=1190 && mouseY>=545 && mouseY<=615){
+  if (mouseIsPressed && mouseX>=1100 && mouseX<=1190 && mouseY>=545 && mouseY<=615){
   fill ('#FFFF00');
   } else {
     fill (255);
@@ -160,7 +160,7 @@ function draw (){
   text("Save",1125,555+110);
 }
  
-function mousePressed(){
+function mouseIsPressed(){
   if (mouseX>=1100 && mouseX<=1190 && mouseY>=520 && mouseY<=615){
     saveFrame ("ezydrw###.png");
   }
