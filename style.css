@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: rgb(27,31,39);
+  background-color: rgb(20, 50, 70);
   font-family:  Arial;
   color: rgb(253,251,115);
   text-align: center;
@@ -20,4 +20,7 @@ h1 {
 h3 {
   padding: 5px;
   margin:3px;  
+  margin-left: 100px;
+  margin-right: 100px;
+ 
 }
